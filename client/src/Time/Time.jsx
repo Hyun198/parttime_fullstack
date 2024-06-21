@@ -4,7 +4,7 @@ import moment from 'moment';
 import { daytime } from '../Header/header';
 
 import './time.css'
-function Time() {
+function Time({ isDarkTheme }) {
     const today = daytime();
 
     const [selectedWeek, setSelectedWeek] = useState(null);
@@ -18,6 +18,10 @@ function Time() {
 
     const [time, setTime] = useState("");
 
+    const timeStyle = {
+        backgroundColor: isDarkTheme ? '#222' : 'whitesmoke',
+        color: isDarkTheme ? 'white' : 'black'
+    }
 
     const fetchData = async () => {
         try {
@@ -54,7 +58,7 @@ function Time() {
 
     return (
         <>
-            <div className="movie-times">
+            <div className="movie-times" style={timeStyle}>
                 <h2>{today.month}월 {today.day}일 </h2>
                 <h2>마지막 영화시간</h2>
                 <h3>{time}</h3>
