@@ -24,9 +24,50 @@
 .tema-btn {
     position: absolute;
     right: 10px;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 40%;
+    border-radius: 20px;
+    height: 40px;
+    width: 75px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.tema-btn span {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    margin: 0 5px;
+}
+
+span:nth-child(2) {
+    position: relative;
+    background-color: black;
+}
+
+span:nth-child(1) i {
+    font-size: 22px;
+    color: white;
+}
+
+span:nth-child(2) i {
+    font-size: 22px;
+    color: white;
+}
+
+span:hover {
     cursor: pointer;
+
+}
+
+span:nth-child(1):hover {
+    transition: 0.5s ease-in-out;
+}
+
+span:nth-child(2):hover {
+    transition: 0.5s ease-in-out;
 }

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import cgv_logo from "../assets/cgv.png";
 import './header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+
 export const daytime = () => {
     let date = new Date();
     let year = date.getFullYear();
@@ -36,7 +39,16 @@ function Header({ isDarkTheme, toggleTheme }) {
                         </a>
                     </Col>
                     <Col>
-                        <button className="tema-btn" onClick={toggleTheme}>{isDarkTheme ? 'Dark' : 'Light'}</button>
+                        <div className="tema-btn" onClick={toggleTheme}>
+                            <span >
+                                <FontAwesomeIcon icon={faSun} />
+                            </span>
+                            <span >
+                                <FontAwesomeIcon icon={faMoon} />
+                            </span>
+                        </div>
+
+
                     </Col>
                 </Row>
             </Container>

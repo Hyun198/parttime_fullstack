@@ -13,18 +13,13 @@ const crawling = async () => {
         const page = await browser.newPage();
         const url = 'https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=cgv+%EA%B9%80%ED%8F%AC%ED%95%9C%EA%B0%95';
 
-
-
         await page.goto(url);
 
         const todayTimes = await page.evaluate(() => {
             return Array.from(document.querySelectorAll(".movie_content._wrap_time_table  span.time_info a")).map(x => x.textContent)
         });
 
-
-
         await browser.close();
-
 
         const timeToMinutes = (time) => {
             const [hour, minute] = time.split(':').map(Number);
