@@ -27,17 +27,19 @@ function Header({ isDarkTheme, toggleTheme }) {
 
     return (
         <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
-            <Container fluid>
+            <Container >
                 <Row className="header-container" style={headerstyle}>
-                    <Col className="today">
+                    <Col className="today" >
                         <h2>{today.year}</h2>
                         <h3>{today.month}월{today.day}일</h3>
                     </Col>
-                    <Col className="cgv">
+
+                    <Col className="cgv" >
                         <a href={`http://www.cgv.co.kr/theaters/?areacode=02&theaterCode=0298&date=${todaydate}`} style={{ width: 150 }}>
                             <img src={cgv_logo} alt="CGV Logo" className="header_img" />
                         </a>
                     </Col>
+
                     <Col>
                         <div className="tema-btn" onClick={toggleTheme}>
                             <span >
@@ -47,7 +49,6 @@ function Header({ isDarkTheme, toggleTheme }) {
                                 <FontAwesomeIcon icon={faMoon} />
                             </span>
                         </div>
-
 
                     </Col>
                 </Row>

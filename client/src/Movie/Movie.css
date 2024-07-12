@@ -12,7 +12,7 @@
     height: auto;
 }
 
-.movies-voard::-webkit-scrollbar {
+.movies-board::-webkit-scrollbar {
     width: 0;
 }
 
